@@ -9,7 +9,7 @@ or die ("Datenbank konnte nicht ausgewählt werden");
 $username = $_SESSION['username'];
      echo "<br>";
      echo $username;
-$abfrage = "SELECT usergroup FROM login WHERE username LIKE $username LIMIT 1";
+$abfrage = "SELECT usergroup FROM login WHERE username LIKE "domse""" LIMIT 1";
      echo "<br>";
      echo $abfrage;
 $ergebnis = mysql_query($abfrage);
