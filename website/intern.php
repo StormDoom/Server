@@ -13,7 +13,7 @@ if(! $conn )
   die('Could not connect: ' . mysql_error());
 }
 
-$sql = "SELECT usergroup FROM login WHERE username=$user ";
+$sql = "SELECT usergroup FROM login WHERE username='$user' ";
 mysql_select_db('homepage');
 
 $result = mysql_query( $sql, $conn );
