@@ -22,7 +22,7 @@ if(! $result )
 {
   die('Could not get data: ' . mysql_error());
 }
-echo mysql_result($result, 4);
+echo mysql_result($result, 3);
 //while($row = mysql_fetch_array($retval, MYSQL_ASSOC))
 //{
 //  echo "ID: {$row['id']}  <br> ".
