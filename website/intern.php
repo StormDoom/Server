@@ -22,7 +22,7 @@ exit;
    //   }
         else
          {
-          echo "$abfrage"
+          echo "$abfrage";
          //echo "Zum FTP geht es <a href=\"http://stormdoom.noip.me/ftp\">hier </a> lang.";
          }
 //   }
