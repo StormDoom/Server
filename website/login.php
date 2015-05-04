@@ -21,7 +21,7 @@ if($row->password == $password)
     echo "Du wirst sofort weitergeleitet.";
     //sleep(4);
     //header("Location: http://stormdoom.noip.me/intern.php/"); 
-    //echo "Falls die Weiterleitung nicht funktioniert bitte <a href=\"http://stormdoom.noip.me/intern.php\">hier</a> drücken.";
+    echo "Falls die Weiterleitung nicht funktioniert bitte <a href=\"http://stormdoom.noip.me/intern.php\">hier</a> drücken.";
     } 
 else 
     { 
