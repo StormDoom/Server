@@ -34,7 +34,8 @@ if(! $retval )
 //echo "Fetched data successfully\n";
 //mysql_close($conn);
 echo "<br>";
-echo "{$row['usergroup']}";
+echo $retval;
+//echo "{$row['usergroup']}";
 	
 //echo "<br>";
 //if(!isset($_SESSION["username"])) 
