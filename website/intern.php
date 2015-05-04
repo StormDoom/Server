@@ -14,13 +14,13 @@ if(!isset($_SESSION["username"]))
 echo "Bitte erst <a href=\"login.html\">einloggen</a>"; 
 exit; 
 }
-   else
-   {
-      if($row->usergroup != "secure")
-      {
-      echo "Du bist noch nicht freigeschaltet. Bitte gedulde dich etwas."
-      }
-         else
+ //  else
+//   {
+ //     if($row->usergroup != "secure")
+   //   {
+     // echo "Du bist noch nicht freigeschaltet. Bitte gedulde dich etwas."
+   //   }
+        else
          {
          echo "Zum FTP geht es <a href=\"http://stormdoom.noip.me/ftp\">hier </a> lang.";
          }
