@@ -8,7 +8,7 @@ mysql_select_db("homepage") or die ("Datenbank konnte nicht ausgewählt werden")
 $username = $_POST["username"]; 
 $password = $_POST["password"]; 
 $password2 = $_POST["password2"]; 
-$group = new;
+$group = 'new';
 
 if($password != $password2 OR $username == "" OR $password == "") 
     { 
