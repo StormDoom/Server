@@ -13,7 +13,7 @@ if(! $conn )
   die('Could not connect: ' . mysql_error());
 }
 
-$sql = 'SELECT id, username, password, usergroup FROM login WHERE username='Josef' ';
+$sql = "SELECT id, username, password, usergroup FROM login WHERE username='Josef' ";
 mysql_select_db('homepage');
 
 $result = mysql_query( $sql, $conn );
@@ -22,7 +22,7 @@ if(! $result )
 {
   die('Could not get data: ' . mysql_error());
 }
-
+echo mysql_result($result, 0);
 //while($row = mysql_fetch_array($retval, MYSQL_ASSOC))
 //{
 //  echo "ID: {$row['id']}  <br> ".
@@ -35,10 +35,10 @@ if(! $result )
 //mysql_close($conn);
 //$row->usergroup = mysql_fetch_object($result);
 //echo $row->usergroup;
-while($row = mysql_fetch_object($result))
-{
-	echo $row->username;
-}
+//while($row = mysql_fetch_object($result))
+//{
+//	echo $row->username;
+//}
 //echo "<br>";
 //echo $retval;
 //echo "{$row['usergroup']}";
