@@ -9,7 +9,7 @@ mysqli_select_db("homepage");
 
 $username = $_SESSION['username'];
 //$abfrage = "SELECT usergroup FROM login WHERE username LIKE $username LIMIT 1";
-$ergebnis = mysqli_query("SELECT * FROM login WHERE $username ");
+$ergebnis = mysqli_query("SELECT * FROM login");
 $row = mysqli_fetch_object($ergebnis); 
 	echo $verbindung;
 	echo "<br>";
