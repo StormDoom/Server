@@ -13,7 +13,7 @@ if(!isset($_SESSION["username"]))
 { 
 echo "Bitte erst <a href=\"login.html\">einloggen</a>"; 
 exit; 
-//}
+}
  //  else
 //   {
  //     if($row->usergroup != "secure")
