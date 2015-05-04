@@ -2,12 +2,12 @@
 session_start(); 
 ?> 
 <?php 
-$verbindung = mysql_connect("localhost", "homepage" , "homepage");
-or die("Verbindung zur Datenbank konnte nicht hergestellt werden"); 
-mysql_select_db("homepage");
-or die ("Datenbank konnte nicht ausgewählt werden"); 
+//$verbindung = mysql_connect("localhost", "homepage" , "homepage");
+//mysql_select_db("homepage");
+//or die ("Datenbank konnte nicht ausgewählt werden"); 
 echo $_SESSION['username'];
-$abfrage = "SELECT usergroup FROM login WHERE username LIKE $_SESSION['username'] LIMIT 1";
+$username = $_SESSION['username'];
+$abfrage = "SELECT usergroup FROM login WHERE username LIKE $username LIMIT 1";
 $ergebnis = mysql_query($abfrage);
 $row = mysql_fetch_object($ergebnis);
 
