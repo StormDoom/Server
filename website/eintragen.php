@@ -6,22 +6,22 @@ or die("Verbindung zur Datenbank konnte nicht hergestellt werden");
 mysql_select_db("homepage") or die ("Datenbank konnte nicht ausgewählt werden"); 
 
 $username = $_POST["username"]; 
-$passwort = $_POST["passwort"]; 
-$passwort2 = $_POST["passwort2"]; 
+$password = $_POST["password"]; 
+$password2 = $_POST["password2"]; 
 
-if($passwort != $passwort2 OR $username == "" OR $passwort == "") 
+if($password != $password2 OR $username == "" OR $password == "") 
     { 
     echo "Eingabefehler. Bitte alle Felder korekt ausfüllen. <a href=\"eintragen.html\">Zurück</a>"; 
     exit; 
     } 
-$passwort = md5($passwort); 
+$password = md5($password); 
 
 $result = mysql_query("SELECT id FROM login WHERE username LIKE '$username'"); 
 $menge = mysql_num_rows($result); 
 
 if($menge == 0) 
     { 
-    $eintrag = "INSERT INTO login (username, passwort) VALUES ('$username', '$passwort')"; 
+    $eintrag = "INSERT INTO login (username, password) VALUES ('$username', '$password')"; 
     $eintragen = mysql_query($eintrag); 
 
     if($eintragen == true) 
