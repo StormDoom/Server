@@ -1,6 +1,6 @@
 
 <?php 
-$verbindung = mysql_connect([ string $server = ini_get("mysql.default_host") [, string $username = ini_get("mysql.default_user") [, string $password = ini_get("mysql.default_password") 
+$verbindung = mysql_connect("localhost", "Benutzername" , "Passwort") 
 or die("Verbindung zur Datenbank konnte nicht hergestellt werden"); 
 
 mysql_select_db("homepage") or die ("Datenbank konnte nicht ausgewählt werden"); 
