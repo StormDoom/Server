@@ -6,13 +6,15 @@ session_start();
 //or die("Verbindung zur Datenbank konnte nicht hergestellt werden"); 
 //mysql_select_db("homepage") or die ("Datenbank konnte nicht ausgewählt werden"); 
 
-$group=mysql_query("SELECT usergroup FROM login WHERE username=$username)
+$abfrage = "SELECT usergroup FROM login WHERE username LIKE $_SESSION["username") LIMIT 1";
+$ergebnis = mysql_query($abfrage);
+$row = mysql_fetch_object($ergebnis);
 if(!isset($_SESSION["username"])) 
    { 
    echo "Bitte erst <a href=\"login.html\">einloggen</a>"; 
    exit; 
    }
-   elseif(!isset($group=secure))
+   elseif($row->usergroup != "secure")
       {
       echo "Du bist noch nicht freigeschaltet. Bitte gedulde dich etwas."
       }
