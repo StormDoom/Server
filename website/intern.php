@@ -38,7 +38,7 @@ else
 	}
 	else
 	{
-		echo "Hallo '$user', <br>";
+		echo "Hallo $user, <br>";
 		echo "Zum FTP geht es <a href=\"http://stormdoom.noip.me/ftp\">hier </a> lang.";
 	}
 }
