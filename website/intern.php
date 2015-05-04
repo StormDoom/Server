@@ -6,7 +6,7 @@ session_start();
 //or die("Verbindung zur Datenbank konnte nicht hergestellt werden"); 
 //mysql_select_db("homepage") or die ("Datenbank konnte nicht ausgewählt werden"); 
 
-//$abfrage = "SELECT usergroup FROM login WHERE username LIKE $_SESSION["username"] LIMIT 1";
+$abfrage = "SELECT usergroup FROM login WHERE username LIKE $_SESSION["username"] LIMIT 1";
 //$ergebnis = mysql_query($abfrage);
 //$row = mysql_fetch_object($ergebnis);
 if(!isset($_SESSION["username"])) 
@@ -22,7 +22,8 @@ exit;
    //   }
         else
          {
-         echo "Zum FTP geht es <a href=\"http://stormdoom.noip.me/ftp\">hier </a> lang.";
+          echo "$abfrage"
+         //echo "Zum FTP geht es <a href=\"http://stormdoom.noip.me/ftp\">hier </a> lang.";
          }
 //   }
    exit; 
