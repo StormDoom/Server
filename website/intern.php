@@ -2,9 +2,9 @@
 session_start(); 
 ?> 
 <?php 
-//$verbindung = mysql_connect("localhost", "homepage" , "homepage");
-//mysql_select_db("homepage")
-///or die ("Datenbank konnte nicht ausgewählt werden"); 
+$verbindung = mysql_connect("localhost", "homepage" , "homepage");
+mysql_select_db("homepage")
+or die ("Datenbank konnte nicht ausgewählt werden"); 
      echo $_SESSION['username'];
 $username = $_SESSION['username'];
      echo "<br>";
@@ -19,6 +19,8 @@ $ergebnis = mysql_query($abfrage);
      echo $abfrage;
      echo "<br>";
      echo $ergebnis;
+     echo "<br>";
+     echo $verbindung;
      
 //$row = mysql_fetch_object($ergebnis);
 //echo "<br>";
