@@ -12,7 +12,7 @@ if(!isset($_SESSION["username"]))
    echo "Bitte erst <a href=\"login.html\">einloggen</a>"; 
    exit; 
    }
-   elseif(!isset($group=="secure"))
+   elseif(!isset($group=secure))
       {
       echo "Du bist noch nicht freigeschaltet. Bitte gedulde dich etwas."
       }
