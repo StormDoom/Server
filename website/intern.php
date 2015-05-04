@@ -16,9 +16,9 @@ if(! $conn )
 $sql = 'SELECT id, username, password, usergroup FROM login';
 mysql_select_db('homepage');
 
-$retval = mysql_query( $sql, $conn );
+$result = mysql_query( $sql, $conn );
 
-if(! $retval )
+if(! $result )
 {
   die('Could not get data: ' . mysql_error());
 }
@@ -33,8 +33,13 @@ if(! $retval )
 //} 
 //echo "Fetched data successfully\n";
 //mysql_close($conn);
-echo "<br>";
-echo $retval;
+while ($row = mysql_fetch_object($result)) 
+{
+    echo $row->username
+    echo $row->usergroup;
+}
+//echo "<br>";
+//echo $retval;
 //echo "{$row['usergroup']}";
 	
 //echo "<br>";
