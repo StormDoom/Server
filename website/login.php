@@ -3,18 +3,18 @@ session_start();
 ?> 
 
 <?php 
-$verbindung = mysql_connect("localhost", "BenutzerName" , "DeinPasswort") 
+$verbindung = mysql_connect("localhost", "homepage" , "homepage") 
 or die("Verbindung zur Datenbank konnte nicht hergestellt werden"); 
 mysql_select_db("homepage") or die ("Datenbank konnte nicht ausgewählt werden"); 
 
 $username = $_POST["username"]; 
-$passwort = md5($_POST["password"]); 
+$password = md5($_POST["password"]); 
 
-$abfrage = "SELECT username, passwort FROM login WHERE username LIKE '$username' LIMIT 1"; 
+$abfrage = "SELECT username, password FROM login WHERE username LIKE '$username' LIMIT 1"; 
 $ergebnis = mysql_query($abfrage); 
 $row = mysql_fetch_object($ergebnis); 
 
-if($row->passwort == $passwort) 
+if($row->password == $password) 
     { 
     $_SESSION["username"] = $username; 
     echo "Login erfolgreich. <br> <a href=\"geheim.php\">Geschützer Bereich</a>"; 
