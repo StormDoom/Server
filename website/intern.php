@@ -24,6 +24,8 @@ if(! $result )
 }
 $usergroup = mysql_result($result, 0);
 echo $usergroup;
+echo "<br>";
+echo $usergroup;
 //while($row = mysql_fetch_array($retval, MYSQL_ASSOC))
 //{
 //  echo "ID: {$row['id']}  <br> ".
