@@ -8,8 +8,8 @@ mysql_select_db("homepage")
 or die ("Datenbank konnte nicht ausgewählt werden"); 
 
 $username = $_SESSION['username'];
-$abfrage = "SELECT usergroup FROM login WHERE username LIKE $username LIMIT 1";
-$ergebnis = mysql_query($abfrage);
+//$abfrage = "SELECT usergroup FROM login WHERE username LIKE $username LIMIT 1";
+$ergebnis = mysql_query("SELECT usergroup FROM login WHERE username LIKE $username LIMIT 1");
 $row = mysql_fetch_object($ergebnis); 
 	echo $verbindung;
 	echo "<br>";
