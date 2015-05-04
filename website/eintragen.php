@@ -8,6 +8,7 @@ mysql_select_db("homepage") or die ("Datenbank konnte nicht ausgewählt werden")
 $username = $_POST["username"]; 
 $password = $_POST["password"]; 
 $password2 = $_POST["password2"]; 
+$group = new
 
 if($password != $password2 OR $username == "" OR $password == "") 
     { 
@@ -21,7 +22,7 @@ $menge = mysql_num_rows($result);
 
 if($menge == 0) 
     { 
-    $eintrag = "INSERT INTO login (username, password) VALUES ('$username', '$password')"; 
+    $eintrag = "INSERT INTO login (username, password, usergroup) VALUES ('$username', '$password', '$group')"; 
     $eintragen = mysql_query($eintrag); 
 
     if($eintragen == true) 
