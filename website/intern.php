@@ -2,27 +2,24 @@
 session_start(); 
 ?> 
 <?php 
+
 $verbindung = mysql_connect("localhost", "homepage" , "homepage");
 mysql_select_db("homepage")
 or die ("Datenbank konnte nicht ausgewählt werden"); 
-     echo $_SESSION['username'];
+
 $username = $_SESSION['username'];
-     echo "<br>";
-     echo $username;
-$abfrage = "SELECT usergroup FROM login WHERE username LIKE domse LIMIT 1";
-     echo "<br>";
-     echo $abfrage;
+$abfrage = "SELECT usergroup FROM login WHERE username LIKE $username LIMIT 1";
 $ergebnis = mysql_query($abfrage);
-     echo "<br>";
-     echo $username;
-     echo "<br>";
-     echo $abfrage;
-     echo "<br>";
-     echo $ergebnis;
-     echo "<br>";
-     echo $verbindung;
-     
-//$row = mysql_fetch_object($ergebnis);
+$row = mysql_fetch_object($ergebnis); 
+	echo $verbindung;
+	echo "<br>"
+	echo $username;
+	echo "<br>";
+	echo $abfrage;
+	echo "<br>";
+	echo $ergebnis;
+	echo "<br>";
+	echo $row;
 //echo "<br>";
 //if(!isset($_SESSION["username"])) 
 //{ 
