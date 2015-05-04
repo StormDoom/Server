@@ -35,7 +35,8 @@ if(! $result )
 //mysql_close($conn);
 while ($row = mysql_fetch_object($result)) 
 {
-    echo $row->username
+    echo $row->username;
+    echo "<br>";
     echo $row->usergroup;
 }
 //echo "<br>";
