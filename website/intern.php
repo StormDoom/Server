@@ -31,11 +31,10 @@ exit;
 }
 else
 {
-	if($usergroup = 'new')
+	if($usergroup == 'new')
 	{
 		echo "Hallo $user, <br>";	
 		echo "Du bist noch nicht freigeschaltet. Bitte gedulde dich etwas.";
-		
 	}
 	else
 	{
