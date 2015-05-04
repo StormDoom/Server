@@ -20,8 +20,9 @@ if($row->password == $password)
     echo "Login erfolgreich. <br> "; 
     echo "Du wirst sofort weitergeleitet.";
     //sleep(4);
-    //header("Location: http://stormdoom.noip.me/intern.php/"); 
-    echo "Falls die Weiterleitung nicht funktioniert bitte <a href=\"http://stormdoom.noip.me/intern.php\">hier</a> drücken.";
+    //header("Location: http://stormdoom.noip.me/intern.php/");
+    echo "<br>";
+    echo "Falls die Weiterleitung nicht funktioniert bitte <a href=\"http://stormdoom.noip.me/intern.php\">hier</a> dr&#252;cken.";
     } 
 else 
     { 
