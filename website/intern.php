@@ -22,7 +22,8 @@ if(! $result )
 {
   die('Could not get data: ' . mysql_error());
 }
-echo mysql_result($result, 0);
+$usergroup = mysql_result($result, 0);
+echo $usergroup;
 //while($row = mysql_fetch_array($retval, MYSQL_ASSOC))
 //{
 //  echo "ID: {$row['id']}  <br> ".
