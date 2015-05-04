@@ -23,7 +23,7 @@ if(! $conn )
 }
 $sql = 'SELECT id, username, password, usergroup FROM login';
 
-mysql_select_db('login');
+mysql_select_db('homepage');
 $retval = mysql_query( $sql, $conn );
 if(! $retval )
 {
