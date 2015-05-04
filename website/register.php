@@ -12,7 +12,7 @@ $group = 'new';
 
 if($password != $password2 OR $username == "" OR $password == "") 
     { 
-    echo "Eingabefehler. Bitte alle Felder korekt ausfüllen. <a href=\"eintragen.html\">Zurück</a>"; 
+    echo "Eingabefehler. Bitte alle Felder korekt ausfüllen. <a href=\"register.html\">Zurück</a>"; 
     exit; 
     } 
 $password = md5($password); 
@@ -31,7 +31,7 @@ if($menge == 0)
         } 
     else 
         { 
-        echo "Fehler beim Speichern des Benutzernames. <a href=\"eintragen.html\">Zurück</a>"; 
+        echo "Fehler beim Speichern des Benutzernames. <a href=\"register.html\">Zurück</a>"; 
         } 
 
 
@@ -39,6 +39,6 @@ if($menge == 0)
 
 else 
     { 
-    echo "Benutzername schon vorhanden. <a href=\"eintragen.html\">Zurück</a>"; 
+    echo "Benutzername schon vorhanden. <a href=\"register.html\">Zurück</a>"; 
     } 
 ?>
