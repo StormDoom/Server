@@ -3,52 +3,38 @@ session_start();
 ?> 
 <?php 
 
-//$verbindung = mysql_connect('localhost', 'homepage' , 'homepage');
-//mysql_select_db('homepage');
-//or die ("Datenbank konnte nicht ausgewählt werden"); 
-
-//$username = $_SESSION['username'];
-//$abfrage = "SELECT usergroup FROM login WHERE username LIKE $username LIMIT 1";
-//$ergebnis = mysql_query('SELECT * FROM login');
-//$row = mysql_fetch_object($ergebnis); 
-
-
 $dbhost = 'localhost';
 $dbuser = 'homepage';
 $dbpass = 'homepage';
 $conn = mysql_connect($dbhost, $dbuser, $dbpass);
+
 if(! $conn )
 {
   die('Could not connect: ' . mysql_error());
 }
-$sql = 'SELECT id, username, password, usergroup FROM login';
 
+$sql = 'SELECT id, username, password, usergroup FROM login';
 mysql_select_db('homepage');
+
 $retval = mysql_query( $sql, $conn );
+
 if(! $retval )
 {
   die('Could not get data: ' . mysql_error());
 }
-while($row = mysql_fetch_array($retval, MYSQL_ASSOC))
-{
-    echo "ID: {$row['id']}  <br> ".
-         "Name: {$row['username']} <br> ".
-         "Passwd: {$row['password']} <br> ".
-         "Group: {$row['usergroup']} <br> ".
-         "--------------------------------<br>";
-} 
-echo "Fetched data successfully\n";
-//mysql_close($conn);
 
-//	echo "<br>";
-//	echo $username;
-//	echo "<br>";
-//	echo $abfrage;
-//	echo "<br>";
-//	echo $ergebnis;
-//	echo "<br>";
-//	echo $row;
-	
+//while($row = mysql_fetch_array($retval, MYSQL_ASSOC))
+//{
+//    echo "ID: {$row['id']}  <br> ".
+//		"Name: {$row['username']} <br> ".
+//		"Passwd: {$row['password']} <br> ".
+//		"Group: {$row['usergroup']} <br> ".
+//		"--------------------------------<br>";
+//} 
+//echo "Fetched data successfully\n";
+//mysql_close($conn);
+echo "<br>";
+echo "{$row['usergroup']}";
 	
 //echo "<br>";
 //if(!isset($_SESSION["username"])) 
