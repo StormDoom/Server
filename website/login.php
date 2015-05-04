@@ -25,7 +25,7 @@ if($row->password == $password)
     } 
 else 
     { 
-    echo "Benutzername und/oder Passwort waren falsch. <a href=\"login.html\">Login</a>"; 
+    echo "Benutzername und/oder Passwort waren falsch. <a href=\"login.html\">Zurück</a>"; 
     } 
 
 ?>
