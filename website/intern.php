@@ -2,7 +2,7 @@
 session_start(); 
 ?> 
 <?php 
-$group=mysql_query("SELECT usergroup FROM homepage WHERE username=$username")
+$group=mysql_query("SELECT usergroup FROM homepage WHERE username=$_SESSION["username"])
 if(!isset($_SESSION["username"])) 
    { 
    echo "Bitte erst <a href=\"login.html\">einloggen</a>"; 
