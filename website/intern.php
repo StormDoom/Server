@@ -25,6 +25,7 @@ exit;
           echo $abfrage;
           echo $ergebnis
           echo $row
+          echo $_SESSION["username"]
          //echo "Zum FTP geht es <a href=\"http://stormdoom.noip.me/ftp\">hier </a> lang.";
          }
 //   }
