@@ -3,7 +3,7 @@ session_start();
 ?> 
 <?php 
 $verbindung = mysql_connect("localhost", "homepage" , "homepage");
-mysql_select_db("homepage");
+mysql_select_db("homepage")
 or die ("Datenbank konnte nicht ausgewählt werden"); 
 echo $_SESSION['username'];
 $username = $_SESSION['username'];
