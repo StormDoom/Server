@@ -33,12 +33,9 @@ if(! $result )
 //} 
 //echo "Fetched data successfully\n";
 //mysql_close($conn);
-while ($row = mysql_fetch_object($result)) 
-{
-    echo $row->username;
-    echo "<br>";
-    echo $row->usergroup;
-}
+$row->usergroup = mysql_fetch_object($result);
+echo $row;
+
 //echo "<br>";
 //echo $retval;
 //echo "{$row['usergroup']}";
