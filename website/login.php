@@ -3,7 +3,7 @@ session_start();
 ?> 
 
 <?php 
-$verbindung = mysql_connect("localhost", "homepage" , "homepage");
+$verbindung = mysql_connect("localhost", "homepage" , "homepage")
 or die("Verbindung zur Datenbank konnte nicht hergestellt werden"); 
 mysql_select_db("homepage") or die ("Datenbank konnte nicht ausgewählt werden"); 
 
@@ -21,7 +21,7 @@ if($row->password == $password)
     echo "Du wirst sofort weitergeleitet.";
     //sleep(4);
     //header("Location: http://stormdoom.noip.me/intern.php/"); 
-    echo "Falls die Weiterleitung nicht funktioniert bitte <a href=\"http://stormdoom.noip.me/intern.php\">hier</a> drücken.";
+    //echo "Falls die Weiterleitung nicht funktioniert bitte <a href=\"http://stormdoom.noip.me/intern.php\">hier</a> drücken.";
     } 
 else 
     { 
