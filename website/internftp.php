@@ -5,7 +5,7 @@ session_start();
 <?php 
 if(!isset($_SESSION["username"])) 
    { 
-   echo "Bitte erst <a href=\"/home/doctor/git/server/website/login.html\">einloggen</a>"; 
+   echo "Bitte erst <a href=\"http://stormdoom.noip.me/login.html\">einloggen</a>"; 
    exit; 
    } 
    
