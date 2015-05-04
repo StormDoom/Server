@@ -5,7 +5,7 @@ session_start();
 <?php 
 if(!isset($_SESSION["username"])) 
    { 
-   echo "Bitte erst <a href=\"login.html\">einloggen</a>"; 
+   echo "Bitte erst <a href=\"/home/doctor/git/server/website/login.html\">einloggen</a>"; 
    exit; 
    } 
    
@@ -39,14 +39,14 @@ if(!isset($_SESSION["username"]))
 ### configuration
 
 # Show the local path. Disable this for security reasons.
-define('SHOW_PATH', TRUE);
+define('SHOW_PATH', FALSE);
 
 # Show a link to the parent directory ('..').
 define('SHOW_PARENT_LINK', TRUE);
 
 # Show "hidden" directories and files, i.e. those whose names
 # start with a dot.
-define('SHOW_HIDDEN_ENTRIES', TRUE);
+define('SHOW_HIDDEN_ENTRIES', FALSE);
 
 ### /configuration
 

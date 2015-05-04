@@ -18,7 +18,6 @@ if (ini_get("session.use_cookies")) {
 
 // Finally, destroy the session.
 session_destroy();
-
-Erfolgreich ausgeloggt!
-
 ?>
+Logout erfolgreich!</br>
+<a href="http://stormdoom.noip.me">Hier</a> geht es zur&#252;ck auf die Startseite.
