@@ -31,13 +31,15 @@ exit;
 }
 else
 {
-	if($usergroup != "registered")
+	if($usergroup = "new")
 	{
+		echo "Hallo '$user', <br>";	
 		echo "Du bist noch nicht freigeschaltet. Bitte gedulde dich etwas.";
 		
 	}
 	else
 	{
+		echo "Hallo '$user', <br>";
 		echo "Zum FTP geht es <a href=\"http://stormdoom.noip.me/ftp\">hier </a> lang.";
 	}
 }
