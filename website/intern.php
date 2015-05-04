@@ -4,8 +4,8 @@ session_start();
 <?php 
 
 $verbindung = mysql_connect("localhost", "homepage" , "homepage");
-mysql_select_db("homepage")
-or die ("Datenbank konnte nicht ausgewählt werden"); 
+mysql_select_db("homepage");
+//or die ("Datenbank konnte nicht ausgewählt werden"); 
 
 $username = $_SESSION['username'];
 //$abfrage = "SELECT usergroup FROM login WHERE username LIKE $username LIMIT 1";
