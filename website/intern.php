@@ -10,11 +10,13 @@ $abfrage = "SELECT usergroup FROM login WHERE username LIKE $_SESSION["username"
 $ergebnis = mysql_query($abfrage);
 $row = mysql_fetch_object($ergebnis);
 if(!isset($_SESSION["username"])) 
-   { 
-   echo "Bitte erst <a href=\"login.html\">einloggen</a>"; 
-   exit; 
-   }
-   elseif($row->usergroup != "secure")
+{ 
+echo "Bitte erst <a href=\"login.html\">einloggen</a>"; 
+exit; 
+}
+   else
+   {
+      if($row->usergroup != "secure")
       {
       echo "Du bist noch nicht freigeschaltet. Bitte gedulde dich etwas."
       }
@@ -22,5 +24,6 @@ if(!isset($_SESSION["username"]))
          {
          echo "Zum FTP geht es <a href=\"http://stormdoom.noip.me/ftp\">hier </a> lang.";
          }
+   }
    exit; 
 ?> 
