@@ -6,6 +6,15 @@
 # is /etc/mailname.
 #myorigin = /etc/mailname
 
+
+relayhost = [smtp.gmail.com]:587
+smtp_sasl_auth_enable = yes
+smtp_sasl_password_maps = hash:/etc/postfix/sasl_passwd
+smtp_sasl_security_options = noanonymous
+smtp_tls_CAfile = /etc/postfix/cacert.pem
+smtp_use_tls = yes
+
+
 smtpd_banner = $myhostname ESMTP $mail_name (Ubuntu)
 biff = no
 
@@ -26,6 +35,7 @@ smtp_tls_session_cache_database = btree:${data_directory}/smtp_scache
 
 # See /usr/share/doc/postfix/TLS_README.gz in the postfix-doc package for
 # information on enabling SSL in the smtp client.
+
 
 smtpd_relay_restrictions = permit_mynetworks permit_sasl_authenticated defer_unauth_destination
 myhostname = trenzalore
