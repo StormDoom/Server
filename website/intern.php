@@ -12,7 +12,14 @@ $username = $_SESSION['username'];
 $abfrage = "SELECT usergroup FROM login WHERE username LIKE $username LIMIT 1";
      echo "<br>";
      echo $abfrage;
-//$ergebnis = mysql_query($abfrage);
+$ergebnis = mysql_query($abfrage);
+     echo "<br>";
+     echo $username;
+     echo "<br>";
+     echo $abfrage;
+     echo "<br>";
+     echo $ergebnis;
+     
 //$row = mysql_fetch_object($ergebnis);
 //echo "<br>";
 //if(!isset($_SESSION["username"])) 
