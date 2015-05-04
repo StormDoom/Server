@@ -3,14 +3,14 @@ session_start();
 ?> 
 <?php 
 
-$verbindung = mysqli_connect("localhost", "homepage" , "homepage");
-mysqli_select_db("homepage");
+$verbindung = mysql_connect('localhost', 'homepage' , 'homepage');
+mysql_select_db('homepage');
 //or die ("Datenbank konnte nicht ausgewählt werden"); 
 
 $username = $_SESSION['username'];
 //$abfrage = "SELECT usergroup FROM login WHERE username LIKE $username LIMIT 1";
-$ergebnis = mysqli_query("SELECT * FROM login");
-$row = mysqli_fetch_object($ergebnis); 
+$ergebnis = mysql_query('SELECT * FROM login');
+$row = mysql_fetch_object($ergebnis); 
 	echo $verbindung;
 	echo "<br>";
 	echo $username;
