@@ -12,7 +12,7 @@ $abfrage = "SELECT usergroup FROM login WHERE username LIKE $username LIMIT 1";
 $ergebnis = mysql_query($abfrage);
 $row = mysql_fetch_object($ergebnis); 
 	echo $verbindung;
-	echo "<br>"
+	echo "<br>";
 	echo $username;
 	echo "<br>";
 	echo $abfrage;
