@@ -18,9 +18,9 @@ if($row->password == $password)
     { 
     $_SESSION["username"] = $username; 
     echo "Login erfolgreich. <br> "; 
-    echo "Du wirst sofort weitergeleitet. \n";
-    sleep(4);
-    //header("Location: http://stormdoom.noip.me/intern.php/");
+    echo "Du wirst sofort weitergeleitet.";
+    //sleep(4);
+    header("Location: http://stormdoom.noip.me/intern.php/");
     echo "<br>";
     echo "Falls die Weiterleitung nicht funktioniert bitte <a href=\"http://stormdoom.noip.me/intern.php\">hier</a> dr&#252;cken.";
     } 
